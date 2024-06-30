@@ -13,9 +13,7 @@ const fetchData=async()=>{
     try{
         const res=await axios.get(`https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json`);
        // console.log(res.data);
-       if(!res.ok){
-        throw new Error("Network response was not ok")
-    }
+      
        setTableData(res.data);
        
 
