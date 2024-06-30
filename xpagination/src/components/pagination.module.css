@@ -1,0 +1,56 @@
+.heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+    padding: 20px;
+}
+/* .paginationTable{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+    padding: 20px;
+    border-radius: 10px;
+    gap:15px;
+    
+}
+
+ .table{
+    margin:10px;
+    } 
+
+ 
+    
+ 
+
+ th,td{
+   
+    min-width: 300px;
+    padding:8px;
+    margin:8px;
+    line-height: 1.7;
+    height: 10px;
+    margin-right:50px;
+
+}
+
+td{
+    font-size: 10px;
+    
+} 
+tr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 10px;
+    
+    
+    
+}
