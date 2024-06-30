@@ -6,17 +6,22 @@ import axios from "axios";
 function Pagination() {
     const[tableData,setTableData]=useState([]);
     const[currentPage,setCurrentPage]=useState(1);
+    
     const rowsPerPage=10;
 
 const fetchData=async()=>{
     try{
         const res=await axios.get(`https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json`);
        // console.log(res.data);
+       if(!res.ok){
+        throw new Error("Network response was not ok")
+    }
        setTableData(res.data);
-        
+       
 
-    }catch(err){
-console.log(err)
+    }catch(error){
+        alert("Failed to fetch data")
+console.error("Error fetching data:",error)
     }
    
 }
