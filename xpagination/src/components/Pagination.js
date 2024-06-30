@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./pagination.module.css"
-import axios from "axios";
+//import axios from "axios";
 
 
 function Pagination() {
@@ -10,17 +10,17 @@ function Pagination() {
     const rowsPerPage=10;
 
 const fetchData=async()=>{
-    try{
-        const res=await axios.get(`https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json`);
-       // console.log(res.data);
-      
-       setTableData(res.data);
-       
-
-    }catch(error){
-        alert("Failed to fetch data")
-console.error("Error fetching data:",error)
-    }
+    try {
+        const response = await fetch('https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const result = await response.json();
+        setTableData(result);
+      } catch (error) {
+        alert('Failed to fetch data');
+        console.error('Error fetching data:', error);
+      }
    
 }
 useEffect(()=>{
