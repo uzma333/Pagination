@@ -31,7 +31,7 @@ const indexOfLastRow=currentPage*rowsPerPage;
 const indexOfFirstRow=indexOfLastRow-rowsPerPage;
 const currentRows=tableData.slice(indexOfFirstRow,indexOfLastRow)
 
- const paginate=(pagenumber)=>setCurrentPage(pagenumber);
+ //const paginate=(pagenumber)=>setCurrentPage(pagenumber);
 
 const handlePrevious=()=>{
     if(currentPage>1){
@@ -88,7 +88,7 @@ const handlePrevious=()=>{
         </div>
         <div className={styles.button}>
         <button onClick={handlePrevious} disabled={currentPage===1} style={{backgroundColor:"#32a875",color:"white", borderRadius:"3px",height:"30px"}}>Previous</button>
-        <button key={ 1} onClick={() => paginate()} style={{backgroundColor:"#32a875",color:"white",borderRadius:"3px",height:"30px"}}> {currentPage+0}</button>
+        <button style={{backgroundColor:"#32a875",color:"white",borderRadius:"3px",height:"30px"}}> {currentPage+0}</button>
         <button onClick={handleNext} disabled={currentPage===Math.ceil(tableData.length/rowsPerPage)} style={{backgroundColor:"#32a875",color:"white",borderRadius:"3px",height:"30px",}}>Next</button>
         </div>
         </div>
