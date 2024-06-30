@@ -87,9 +87,9 @@ const handlePrevious=()=>{
         
         </div>
         <div className={styles.button}>
-        <button onClick={handlePrevious} disabled={currentPage===1} style={{backgroundColor:"#32a875",color:"white", borderRadius:"3px",height:"30px"}}>Previous</button>
+        <button onClick={handlePrevious} style={{backgroundColor:"#32a875",color:"white", borderRadius:"3px",height:"30px"}}>Previous</button>
         <button style={{backgroundColor:"#32a875",color:"white",borderRadius:"3px",height:"30px"}}> {currentPage+0}</button>
-        <button onClick={handleNext} disabled={currentPage===Math.ceil(tableData.length/rowsPerPage)} style={{backgroundColor:"#32a875",color:"white",borderRadius:"3px",height:"30px",}}>Next</button>
+        <button onClick={handleNext}  style={{backgroundColor:"#32a875",color:"white",borderRadius:"3px",height:"30px",}}>Next</button>
         </div>
         </div>
    
